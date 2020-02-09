@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: auto;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: flex;
+        }
+
+        header {
+            border-bottom: 1px solid #423940;
+            position: absolute;
+            right: 0px;
+            left: 0px;
+            padding: 0px 15px;
+        }
+
+        header .row {
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .brand a {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 22;
+            font-weight: 600;
+            color: white;
+            position: relative;
+        }
+
+        header .brand a::before {
+            content: '';
+            height: 3px;
+            background-color: #ffffff;
+            width: 100%;
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+
+        }
+
+        header .navbar {
+            /*background-color: rosybrown;*/
+        }
+
+        header .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+        }
+
+        header .navbar ul li {
+            display: inline-block;
+            margin-left: 35px;
+
+        }
+
+        header .navbar ul li a {
+            font-size: 15px;
+            text-decoration: none;
+            line-height: 72px;
+            color: #ffffff;
+            display: block;
+            font-weight: 600;
+            position: relative;
+
+
+        }
+
+        header .brand a.active::before {
+            content: '';
+            height: 3px;
+            background-color: #ffffff;
+            width: 100%;
+            position: absolute;
+            left: 0px;
+            bottom: 1px;
+
+        }
+
+        .home {
+            min-height: 100vh;
+            background-image: url("images/download.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .home .full-screen {
+            min-height: 100vh;
+        }
+
+        .home .home-content {
+            max-width: 100%;
+            flex: 0 0 100%;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            text-align: center;
+        }
+
+        .home .home-content.block {
+            flex: 0 0 75%;
+            max-width: 75%;
+            padding-left: 35px;
+            border-left: 5px solid #ffffff;
+        }
+
+        .block h6 {
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0;
+            padding: 0;
+            line-height: 1.2;
+        }
+
+        .block h1 {
+            color: white;
+            font-size: 80px;
+            font-weight: 600;
+            margin: 0 0 10px;
+            padding: 0;
+            line-height: 1.2;
+
+        }
+
+        .block h3 {
+            color: white;
+            font-size: 25px;
+            font-weight: 500;
+            margin: 0;
+            padding: 0;
+            line-height: 1.2;
+
+        }
+
+        .about-me {
+            padding: 100px 15px;
+            float: left;
+            background-image: url("images/happy-new-year-text-on-black-background-3679701.jpg");
+    
+        }
+
+        .section-title {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .section-title h1 {
+            display: inline-block;
+            font-size: 35px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #000000;
+            margin: 0 0 10px;
+            position: relative;
+            padding-bottom: 5px;
+
+
+        }
+
+        .section-title h1::before {
+            content: "";
+            left: 0;
+            position: absolute;
+            height: 2px;
+            right: 20%;
+            background-color: goldenrod;
+            bottom: 0px;
+
+        }
+
+        .section-title p.small {
+            display: block;
+            font-size: 14px;
+            color: goldenrod;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        .skills {
+            float: left;
+            padding: 100px 15px;
+            
+
+        }
+
+        .section-skills h1 {
+
+            display: inline-block;
+            font-size: 35px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #000000;
+            margin: 0 0 10px;
+            position: relative;
+            padding-bottom: 5px;
+        }
+
+        .footer {
+            padding: 14px 0px;
+            text-align: center;
+            color:maroon;
+            font-weight: 300;
+            display:inline-block;
+            align-items: center;
+            margin-left: 300px;
+            padding-left: 100px;    
+            font-weight: 500;  
+            font-size: medium; 
+            font-style: oblique;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="brand">
+                    <a href="" class="logo">MyPortfolio</a>
+                </div>
+
+                <div class="navbar">
+                    <ul>
+                        <li><a href="Home" class="active">Home</a></li>
+                        <li><a href="About">About</a></li>
+                        <li><a href="Skills">Skills</a></li>
+                        <li><a href="Contact">Contacts</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!-- start home-->
+    <section class="home">
+        <div clas="container">
+            <div class="row full-screen">
+                <div class="home-content">
+                    <div class="block">
+                        <h6>Hello My name is</h6>
+                        <h1>Maryan Mohamed</h1>
+                        <h3>Front-End Developer</h3>
+                        <div class="cv-btn">
+                            <a href="Download Cv"></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- start about section-->
+    <section class="about-me">
+        <div class="container">
+            <div class="row">
+                <div class="section-title">
+                    <h1>About Me</h1>
+                    <p class="small"> Information about me</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="about-content">
+                    <div class="img">
+                        <img src="images/img.jpeg" alt="img">
+                    </div>
+                    <div class="text">
+                        <h2>I'M Maryan Mohamed</h2>
+                        <h3>A lead Front-End Developer In Nairobi<h3>
+                                <p>I architect and develop websites and applications using web technologies such as HTML
+                                    CSS JavaScript</p>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+    <!---prac-->
+    <!-- start about section-->
+    <section class="skills">
+        <div class="container">
+            <div class="row">
+                <div class="section-skills">
+                    <h1>My Skills</h1>
+                    <p class="small">Programming languages</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="about-content">
+                    <div class="list">
+                        <ol>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>BootStrap</li>
+                            <li>JavaScript</li>
+
+                        </ol>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+    <div class="footer">
+        <footer>
+            <p>Posted by:Maryan</p>
+            <p>Contact information: <a href="maryamhass@gmail.com">
+                    maryanhass19@gmail.com</a>.</p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
